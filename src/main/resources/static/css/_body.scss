@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: $body-color-webkit;
+    background: $body-color;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    fieldset {
+        width: 100%;
+        border: 1px solid #007bff;
+        margin-top: 10px;
+        padding: 20px;
+        text-align: start;
+
+        legend {
+            padding: 0 5px;
+            font-weight: bold;
+        }
+
+        input {
+            height: 30px;
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding-left: 5px;
+
+            &:focus {
+                outline: 0 none;
+                border-color: #007bff;
+            }
+        }
+    }
+
+    button {
+        width: 100%;
+        height: 30px;
+        margin-top: 10px;
+        background-color: $button-color;
+        color: $letter-color;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        opacity: .8;
+        transition: .7s ease all;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1; 
+        }
+    }
+}
+

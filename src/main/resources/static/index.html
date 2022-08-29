@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/bb59b1c510.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js/setTime.js"></script>
+    <script type="text/javascript" src="app.js/patient.js"></script>
+    <script type="text/javascript" src="app.js/dentist.js"></script>
+    <script type="text/javascript" src="app.js/turn.js"></script>
+    <title>Clinica DH 🦷</title>
+</head>
+<body>
+    <header>
+        <div class="skeleton">
+            <h1>CLÍNICA ODONTOLÓGICA <span>DH</span></h1>
+        </div>
+        
+    </header>
+<main>
+    <section class="grid-container">    
+            <div class="card skeleton">
+                <div class="image-patient skeleton"></div>
+                <h2 class="skeleton">PACIENTES</h2>
+                <button type="submit" class="skeleton" id="open-popup-patient">Registrar Paciente</button>
+                <button type="submit" class="skeleton" id="list-patients">Listar Pacientes</button>
+                <form  class="skeleton" id="read-form-patient">
+                    <fieldset>
+                        <legend>Buscar por ID</legend>
+                        <label for="read-patient">
+                            <input type="text" id="read-patient" placeholder="Ingrese ID"/>
+                            <button type="submit" class="skeleton">Buscar</button>
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
+        <div class="card skeleton">
+            <div class="image-dentist skeleton"></div>
+            <h2 class="skeleton">ODONTÓLOGOS</h2>
+            <button type="submit" class="skeleton" id="open-popup-dentist">Registrar Odontólogos</button>
+            <button type="submit" class="skeleton" id="list-dentists">Listar Odontólogos</button>
+            <form class="skeleton" id="read-form-dentist">
+                <fieldset>
+                    <legend>Buscar por ID</legend>
+                    <label form="read-dentist">
+                        <input type="text" id="read-dentist" placeholder="Ingrese ID"/>
+                        <button type="submit" class="skeleton">Buscar</button>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="card skeleton">
+            <div class="image-turn skeleton"></div>
+            <h2 class="skeleton">TURNOS</h2>
+            <button type="submit" class="skeleton" id="open-popup-turn">Registrar Turno</button>
+            <button type="submit" class="skeleton" id="list-turns">Listar Turnos</button>
+            <form class="skeleton" id="read-form-turn">
+                <fieldset>
+                    <legend>Buscar por ID</legend>
+                    <label for="read-turn">
+                        <input type="text" id="read-turn" placeholder="Ingrese ID"/>
+                        <button type="submit" class="skeleton">Buscar</button>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <!-- Overlay = oscurece la pantalla -->
+    <div class="overlay" id="overlay">
+        <!-- Popup = abre el div donde se va a a cargar el formulario -->
+        <div class="popup" id="popup">
+            <a class="close-popup" id="close-popup"><strong>X</strong></a>
+            <div id="register">
+                <!-- Register = donde se renderiza el formulario de pacientes, odontólogos y turnos -->
+            </div>
+            <div id="clear-log" class="clear-log">
+                <!-- Delete = donde se renderiza el popup para confirmar eliminación de los registros -->
+            </div>
+        </div>
+    </div>
+    <div id="list">
+        <!-- Donde se renderizan los listados -->
+    </div>
+</main>
+<footer class="skeleton">
+    <p><strong>Made whit <i class="fas fa-heart"></i> by Germán Binder - Certified Tech Developer</strong></p>
+</footer>
+</body>
+</html>

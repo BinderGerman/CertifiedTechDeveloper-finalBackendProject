@@ -1,0 +1,152 @@
+.grid-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+
+    .card {
+        width: 35%;
+        background: $card-color-webkit;
+        background: $card-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 10px;
+
+        .image-patient,
+        .image-dentist,
+        .image-turn {
+            height: 200px;
+            background-size: cover;
+        }
+
+        .image-patient {
+            background-image: url(../img/patient.jpg);
+        }
+
+        .image-dentist {
+            background-image: url(../img/dentist.jpg);
+        }
+
+        .image-turn {
+            background-image: url(../img/turn.jpg);
+        }
+
+        h2 {
+            margin-top: 10px;
+        }
+    }
+}
+
+.overlay {
+    background: rgba(0,0 ,0, .5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    width: 35%;
+    height: auto;
+    max-height: calc(100vh - 40px);
+    background: #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+    padding: 15px;
+    text-align: center;
+    transition: .6s ease all;
+    transform: scale(0.7)M;
+    opacity: 1;
+    overflow-y: scroll;
+
+    .clear-log {
+        p {
+            color: $details-color;
+        }
+    }
+
+}
+
+.popup.active {
+    opacity: 1;
+    transform: scale(1); 
+}
+
+.close-popup {
+    font-size: 25px;
+    font-weight: bold;
+    color: #bbbbbb;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    transition: .3s ease all;
+
+    &:hover {
+        cursor: pointer;
+        color: $details-color;
+    }
+}
+
+.ok,
+.problem {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ok {
+    color: $details-color-ok;
+}
+
+.problem {
+    color: $details-color;
+}
+
+.render-list {
+    width: 98%;
+    height: fit-content;
+    background: $card-color;
+    background: $card-color-webkit;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    table {
+        width: 100%;
+
+        caption {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        tr {
+            text-align: center;
+            border-bottom: 1px solid #007bff;
+        }
+
+        td {
+            padding: 5px 0px;
+        }
+
+        button {
+            width: 80%;
+            height: 30px;
+            margin-top: 0px;
+        }
+    }
+
+}

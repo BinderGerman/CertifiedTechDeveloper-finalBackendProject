@@ -1,0 +1,7 @@
+Este programa corre sobre el puerto 8080
+Tiene un loggin incorporado. Los datos para ingresar son:
+-email: germanbinder@email.com
+-password: passwordadmin
+La vista del Front no esta terminada:
+- Para las pruebas de test se recomienda primero los test unitarios y luego los test de integración
+Todos con un tipo de tabla create-drop
